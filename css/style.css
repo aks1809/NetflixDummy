@@ -1,0 +1,368 @@
+:root{
+	--primary-color: #FF0000;
+	--tabular-color: #141414;
+	--gray-font: #808080;
+}
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+body{
+	-webkit-font-smoothing: antialiased;
+	background: black;
+}
+button{
+	text-decoration: none;
+	color: #FFFFFF;
+	text-align: center;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+	color: var(--gray-font);
+}
+h1,h2,h3,h4{
+	text-align: center;
+	color: #FFFFFF;
+}
+.header{
+	height: 93vh;
+	width: 100%;
+	position: relative;
+	background: url("../images/background.png") no-repeat center center/cover;
+}
+.header::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.3);
+	box-shadow: inset 150px 100px 150px #000000, inset -150px -100px 150px #000000;
+	z-index: 1;
+}
+.header .logo{
+	position: relative;
+	height: 70px;
+	z-index: 2;
+}
+.button{
+	background: rgba(255,0,0,0.9);
+	border-radius: 2px;
+	padding: 7px 19px;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+.button:hover{
+	background: var(--primary-color);
+}
+.bigbutt{
+	font-size: 25px;
+	padding: 20px 50px;
+}
+.mbutt{
+	font-size: 17px;
+	padding: 16px 20px;
+}
+.header .logo>img{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	width: 170px;
+	transform: translate(-50%,-25%);
+}
+.header .logo>a{
+	position: absolute;
+	top: 50%;
+	right: 3%;
+	font-size: 16px;
+	transform: translate(0,-50%);	
+}
+.header .content{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	height: auto;
+	width: 100%;
+	z-index: 2;
+	justify-content: center;
+	align-content: center;
+	margin-top: 20vh;
+}
+.header .content>h1{
+	font-size: 80px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+.header .content>h3{
+	font-size: 30px;
+	font-weight: lighter;
+	margin-bottom: 20px;
+}
+.header .content>a{
+	margin: 0 auto;
+	max-width: 60%;
+}
+/*Tabs Selector*/
+.tabs{
+	background: var(--tabular-color);
+	text-align: center;
+	position: relative;
+	z-index: 3;
+	border-bottom: 1px #7A7A7A solid;
+	cursor: pointer;
+}
+.tab-border{
+	border-bottom: 4px red solid; 
+}
+.tabs .container{
+	color: var(--gray-font);
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	align-content: center;
+	padding-top: 20px;
+	justify-content: center;
+	font-size: 15px;
+	font-weight: lighter;
+	max-width: 80%;
+	margin: auto;
+}
+.tabs .container p{
+	padding-bottom: 10px;
+}
+.tabs .container i{
+	padding-bottom: 10px;
+}
+.tabs .container div:hover{
+	color: white;
+}
+/*Display should be none*/
+#tab-1-content,
+#tab-2-content,
+#tab-3-content{
+	display: none;
+}
+.show{
+	display: block !important;
+}
+.infoct{
+	padding-top: 40px;
+}
+.infoct .tabular1 .innercontent{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 10px;
+	align-items: center;
+	justify-content: center;
+}
+.infoct .tabular1 .innercontent .matter{
+	margin-left: 30%;
+}
+.infoct .tabular1 .innercontent .matter h3{
+	font-size: 24px;
+	font-weight: lighter;
+	text-align: left;
+	padding-bottom: 20px;
+}
+.infoct .tabular1 .innercontent .image>img{
+	max-width: 35vw;
+}
+.infoct .tabular2 .matter{
+	padding: 0px 13%;
+	text-align: right;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	justify-content: center;
+	align-items: center;
+}
+.infoct .tabular2 .matter h3{
+	font-size: 20px;
+	font-weight: lighter;
+	padding-bottom: 20px;
+	text-align: left;
+}
+.infoct .tabular2 .devices{
+	text-align: center;
+	padding: 20px 0px;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	justify-content: center;
+	align-items: end;
+	margin: 0px 8%;
+
+}
+.infoct .tabular2 .devices>div{
+	padding: 0px 10px;
+}
+.infoct .tabular2 .devices p{
+	color: var(--gray-font);
+	font-size: 16px;
+}
+.infoct .tabular2 .devices h2{
+	font-size: 19px;
+	font-weight: lighter;
+	padding: 10px 0px;
+}
+.infoct .tabular2 .devices img{
+	max-width: 75%;
+}
+.infoct .tabular3 .matter{
+	padding: 0px 13%;
+	text-align: right;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	justify-content: center;
+	align-items: center;
+}
+.infoct .tabular3 .matter h3{
+	font-size: 20px;
+	font-weight: lighter;
+	padding-bottom: 20px;
+	text-align: left;
+}
+.infoct .tabular3 .table{
+	width: 80%;
+	margin: 40px auto;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+.infoct .tabular3 .table thead tr th{
+	color: white;
+	text-align: center;
+	font-size: 13px;
+}
+.infoct .tabular3 .table thead th{
+	text-transform: uppercase;
+	padding: 20px 10px;
+}
+.infoct .tabular3 .table tbody tr td{
+	color: var(--gray-font);
+	text-align: center;
+	padding: 10px 15px;
+}
+.infoct .tabular3 .table tbody tr:nth-child(even){
+	background: var(--tabular-color);
+}
+.infoct .tabular3 .table tbody tr td:first-child{
+	text-align: left;
+}
+.footer{
+	padding-top: 80px;
+	margin: 0px 5vw;
+}
+.footer a{
+	color: var(--gray-font);
+}
+.footer a:hover{
+	text-decoration: underline;
+}
+.footer .faq{
+	padding: 20px 0px;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	text-align: left;
+}
+.footer .faq a{
+	padding-bottom: 5px;
+	font-size: 12px;
+}
+.footer .brand p{
+	font-size: 13px;
+	color: var(--gray-font);
+	padding-bottom: 30px;
+}
+@media(max-width: 1000px){
+	.header .logo>img{
+		top:0;
+		left:0;
+		width: 170px;
+		transform: translate(10%,35%);
+	}
+	.header .content>h1{
+		font-size: 60px;
+	}
+	.header .content>h3{
+		font-size: 25px;
+	}
+	.infoct .tabular1 .innercontent{
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	.infoct .tabular1 .innercontent .matter{
+		margin: 0px 10%;
+	}
+	.infoct .tabular1 .innercontent .matter h3{
+		text-align: center;
+	}
+	.infoct .tabular1 .innercontent .image>img{
+		max-width: 60%;
+	}
+	.infoct .tabular2 .matter{
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	.infoct .tabular2 .matter h3{
+		text-align: center;
+	}
+	.infoct .tabular2 .devices{
+		grid-template-columns: 1fr;
+	}
+	.infoct .tabular2 .devices p{
+		padding-bottom: 40px;
+	}
+	.infoct .tabular3 .matter{
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	.infoct .tabular3 .matter h3{
+		text-align: center;
+	}
+	.footer .faq{
+		grid-template-columns: repeat(3,1fr);
+	}
+}
+@media(max-width: 630px){
+	.bigbutt{
+		font-size: 20px;
+		padding: 20px 30px;
+	}
+	.header .content>h1{
+		font-size: 8vw;
+	}
+	.header .content>h3{
+		font-size: 4vw;
+	}
+	.bigbutt{
+		font-size: 17px;
+		padding: 15px 30px;
+	}
+	.header .content{
+		margin-top: 50vh;
+	}
+	.header .content>h1{
+		margin-bottom: 10px;
+	}
+	.header .content>h3{
+		margin-bottom: 20px;
+	}
+	.header::after{
+		background: rgba(0,0,0,0);
+		box-shadow: inset 0px 20px 30px #000000, inset 0px -300px 100px #000000;
+	}
+	.tabs .container{
+		font-size: 12px;
+	}
+	.footer .faq{
+		grid-template-columns: repeat(2,1fr);
+	}
+	.hide-sm{
+		display: none;
+	}
+}
